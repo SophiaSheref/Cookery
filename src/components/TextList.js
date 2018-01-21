@@ -1,8 +1,9 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button, ScrollView } from 'react-native';
 
 const TextList = props => {
-  let arr = props.listItems.split(props.splitChar);
+  let arr = props.listItems.split('\n');
+  console.log(arr);
   const styleObj = {
     flex: 1,
     flexDirection: 'column'
@@ -12,7 +13,7 @@ const TextList = props => {
     const number = (bool, i)=> {
       if (bool) {
         return (i + 1) + ". "
-      }
+      };
     };
     array = array.map((element, i) => {
       return (

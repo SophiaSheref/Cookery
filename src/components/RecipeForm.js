@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 import { 
   FormLabel, 
   FormInput, 
@@ -35,6 +35,7 @@ class RecipeForm extends Component {
           <FormValidationMessage>{'This field is required'}</FormValidationMessage>
           
           <FormLabel>Ingredients</FormLabel>
+          <Text> Put each ingredient on a separate line </Text>
             <AutoGrowingTextInput
               value={this.props.ingredients}
               onChangeText={text => this.props.recipeUpdate({ prop: 'ingredients', value: text })}
@@ -49,6 +50,7 @@ class RecipeForm extends Component {
 
             
             <FormLabel>Steps</FormLabel>
+            <Text> Put each step on a separate line and no need to number them. We do that for you! </Text>
             <AutoGrowingTextInput
               value={this.props.steps}
               onChangeText={text => this.props.recipeUpdate({ prop: 'steps', value: text })}
@@ -62,18 +64,21 @@ class RecipeForm extends Component {
             />
 
           <FormLabel>Serving Size</FormLabel>
+          <Text> Input a number.</Text>
           <FormInput
             value={this.props.servings}
             onChangeText={value => this.props.recipeUpdate({ prop: 'servings', value })}
           />
           
           <FormLabel>Prep Time</FormLabel>
+          <Text> Input number of minutes.</Text>
           <FormInput 
             value={this.props.prep}
             onChangeText={value => this.props.recipeUpdate({ prop: 'prep', value })}
           />
           
           <FormLabel>Cook Time</FormLabel>
+          <Text> Input number of minutes.</Text>
           <FormInput 
             value={this.props.cook}
             onChangeText={value => this.props.recipeUpdate({ prop: 'cook', value })}

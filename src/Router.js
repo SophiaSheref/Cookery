@@ -1,10 +1,11 @@
 //Import dependencies
 import React from 'react';
 import { Scene, Router, Actions } from 'react-native-router-flux'; // 4.0.0-beta.28
-import LoginForm from './components/LoginForm';
 import RecipeList from './components/RecipeList';
 import RecipeCreate from './components/RecipeCreate';
 import RecipeEdit from './components/RecipeEdit';
+import Recipe from './components/Recipe';
+import LandingPage from './components/LandingPage';
 
 //Create router component
 const RouterComponent = () => {
@@ -15,7 +16,7 @@ const RouterComponent = () => {
 				{/* Auth scene groups 'pages' in the Auth flow */}
 				<Scene key='auth'>
 					{/* Login scene displays the LoginForm component */}
-					<Scene key='login' component={LoginForm} title='Please Login' initial />
+					<Scene key='login' component={LandingPage} title='Please Login' initial />
 				</Scene>
 				{/* Main scene groups 'pages' in the main flow of app */}
 				<Scene key='main'>
@@ -30,6 +31,7 @@ const RouterComponent = () => {
 					/>
 					{/* Create/Edit recipes - different versions of recipe form */}
 					<Scene key='recipeCreate' component={RecipeCreate} title='Create Recipe' />
+					<Scene key='recipeView'	component={Recipe} title='Recipe' />
 					<Scene key='recipeEdit' component={RecipeEdit} title='Edit Recipe' />
 				</Scene>
 			</Scene>
