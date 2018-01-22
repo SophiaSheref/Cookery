@@ -35,7 +35,7 @@ class RecipeForm extends Component {
           <FormValidationMessage>{'This field is required'}</FormValidationMessage>
           
           <FormLabel>Ingredients</FormLabel>
-          <Text> Put each ingredient on a separate line </Text>
+          <Text style={styles.textStyle}> Put each ingredient on a separate line. </Text>
             <AutoGrowingTextInput
               value={this.props.ingredients}
               onChangeText={text => this.props.recipeUpdate({ prop: 'ingredients', value: text })}
@@ -50,7 +50,7 @@ class RecipeForm extends Component {
 
             
             <FormLabel>Steps</FormLabel>
-            <Text> Put each step on a separate line and no need to number them. We do that for you! </Text>
+            <Text style={styles.textStyle}> Put each step on a separate line and no need to number them. We do that for you! </Text>
             <AutoGrowingTextInput
               value={this.props.steps}
               onChangeText={text => this.props.recipeUpdate({ prop: 'steps', value: text })}
@@ -64,21 +64,23 @@ class RecipeForm extends Component {
             />
 
           <FormLabel>Serving Size</FormLabel>
-          <Text> Input a number.</Text>
+          <Text style={styles.textStyle}> Input a number.</Text>
           <FormInput
+            style={styles.formInput}
             value={this.props.servings}
             onChangeText={value => this.props.recipeUpdate({ prop: 'servings', value })}
           />
           
           <FormLabel>Prep Time</FormLabel>
-          <Text> Input number of minutes.</Text>
+          <Text style={styles.textStyle}> Input number of minutes.</Text>
           <FormInput 
+            style={styles.formInput}
             value={this.props.prep}
             onChangeText={value => this.props.recipeUpdate({ prop: 'prep', value })}
           />
           
           <FormLabel>Cook Time</FormLabel>
-          <Text> Input number of minutes.</Text>
+          <Text style={styles.textStyle}> Input number of minutes.</Text>
           <FormInput 
             value={this.props.cook}
             onChangeText={value => this.props.recipeUpdate({ prop: 'cook', value })}
@@ -154,15 +156,17 @@ const styles = {
   },
   
   formInput: {
-    padding: 15
+    padding:15
   },
-  /*button: {
-    marginTop: 50,
-    paddingBottom: 300
-  },*/
   textInput: {
     width: 300,
     backgroundColor: '#F8F8F8'
+  },
+  textStyle:{
+    fontSize:14,
+    fontFamily: 'OpenSans',
+    color: '#505050',
+    padding: 15
   }
 };
 

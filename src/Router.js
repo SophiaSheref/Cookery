@@ -6,6 +6,7 @@ import RecipeCreate from './components/RecipeCreate';
 import RecipeEdit from './components/RecipeEdit';
 import Recipe from './components/Recipe';
 import LandingPage from './components/LandingPage';
+import RecipeSearch from './components/RecipeSearch';
 
 //Create router component
 const RouterComponent = () => {
@@ -22,8 +23,6 @@ const RouterComponent = () => {
 				<Scene key='main'>
 					{/* Recipes scene is initial in main flow, has a right-header action */}
 					<Scene
-						rightTitle='Add'
-						onRight={() => Actions.recipeCreate()}
 						key='recipeList'
 						component={RecipeList}
 						title='Recipes'
@@ -31,8 +30,15 @@ const RouterComponent = () => {
 					/>
 					{/* Create/Edit recipes - different versions of recipe form */}
 					<Scene key='recipeCreate' component={RecipeCreate} title='Create Recipe' />
-					<Scene key='recipeView'	component={Recipe} title='Recipe' />
+					<Scene 
+					  key='recipeView'
+					  component={Recipe} 
+					  title='Recipe'
+					  onRight={() => Actions.recipeEdit()}
+					  rightTitle='Edit'
+					 />
 					<Scene key='recipeEdit' component={RecipeEdit} title='Edit Recipe' />
+					<Scene key='recipeSearch' component={RecipeSearch} title='Search' />
 				</Scene>
 			</Scene>
 		</Router>

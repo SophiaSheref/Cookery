@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 import { ScrollView } from 'react-native';
 import { connect } from 'react-redux'; // 5.0.6
-import { recipeUpdate, recipeCreate } from '../actions';
+import { recipeUpdate, recipeCreate, clearForm } from '../actions';
 import { CardSection, Button } from './common';
 import RecipeForm from './RecipeForm';
 
 import "redux"; // 3.7.2
 
 class RecipeCreate extends Component {
+  
+  componentWillMount() {
+    this.props.clearForm();
+  }
 
 	onButtonPress() {
 	const { 
@@ -97,4 +101,4 @@ const mapStateToProps = (state) => {
       dairyfree };
 };
 
-export default connect(mapStateToProps, { recipeUpdate, recipeCreate })(RecipeCreate);
+export default connect(mapStateToProps, { recipeUpdate, recipeCreate, clearForm })(RecipeCreate);

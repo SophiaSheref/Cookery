@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import _ from 'lodash'; // 4.17.4
 import { connect } from 'react-redux'; // 5.0.6
-import { StyleSheet, Text, View, Button, ScrollView } from 'react-native';
+import { Text, View, ScrollView } from 'react-native';
+import RecipeStyle from './RecipeStyle';
 import { recipeUpdate } from '../actions';
 import TextList from './TextList';
+import Diet from './Diet';
 
 import "redux"; // 3.7.2
 
@@ -23,92 +25,103 @@ class Recipe extends Component {
 
   render() {
     return (
-      <View 
-      style={{
-        flex: 1,
-        flexDirection: 'column',
-        // backgroundColor: 'blue',
-        paddingTop: 24
-      }}>
-        <ScrollView>
-          <View style={{
-            flex: 1,
-            flexDirection: 'column',
-            height: 300,
-            // backgroundColor: 'red'
-          }}>
-            <View style={{
-              alignItems: 'center',
-              flexDirection: 'row',
-              flex: 2,
-              justifyContent: 'center',
-              // backgroundColor: 'pink'
-            }}>
-              <Text style={{ fontSize: 50 }}>{this.props.name}</Text>
+  <View style={RecipeStyle.primary}>
+      <ScrollView>
+        <View style={RecipeStyle.header}>
+          <View style={RecipeStyle.titleBox}>
+            <Text style={RecipeStyle.title}>{this.props.name}</Text>
+          </View>
+          <View style={RecipeStyle.infoBar}>
+            <View style={RecipeStyle.infoBox}>
+              <Text style={RecipeStyle.infoText}>Serving Size</Text>
+              <Text style={RecipeStyle.genText}>{this.props.servings} people</Text>
             </View>
-            <View style={{
-              alignItems: 'center',
-              flexDirection: 'row',
-              flex: 1,
-              justifyContent: 'center',
-              // backgroundColor: 'purple'
-            }}>
-              <View style={{ alignItems: 'center', justifyContent: 'center', flex: 1 }}>
-                <Text style={{ fontSize: 20 }}>Serving Size</Text>
-                <Text style={{ fontSize: 25 }}>{this.props.servings} people</Text>
-              </View>
-              <View style={{ alignItems: 'center', justifyContent: 'center', flex: 1 }}>
-                <Text style={{ fontSize: 20 }}>Prep time</Text>
-                <Text style={{ fontSize: 25 }}>{this.props.prep} min</Text>
-              </View>
-              <View style={{ alignItems: 'center', justifyContent: 'center', flex: 1 }}>
-                <Text style={{ fontSize: 20 }}>Cook Time</Text>
-                <Text style={{ fontSize: 25 }}>{this.props.cook} min</Text>
-              </View>
+            <View style={RecipeStyle.infoBox}>
+              <Text style={RecipeStyle.infoText}>Prep time</Text>
+              <Text style={RecipeStyle.genText}>{this.props.prep} min</Text>
+            </View>
+            <View style={RecipeStyle.infoBox}>
+              <Text style={RecipeStyle.infoText}>Cook Time</Text>
+              <Text style={RecipeStyle.genText}>{this.props.cook} min</Text>
             </View>
           </View>
-          <View style={{
-            flexDirection: 'column',
-            flex: 1,
-            alignItems: 'center',
-            // backgroundColor: 'orange'
-          }}>
-            <View style={{
-              flex: 1,
-              flexDirection: 'row',
-              justifyContent: 'center',
-              alignItems: 'center'
-            }}>
-              <Text style={{ fontSize: 30 }}>Ingredients</Text>
-            </View>
-            <TextList listItems={this.props.ingredients} size="20" multiCol="true" />
+          
+        <View style={RecipeStyle.instructionsBox}>
+          <View style={RecipeStyle.titleBoxTwo}>
+            <Text style={RecipeStyle.subTitle}>Ingredients</Text>
           </View>
-          <View style={{
-            flex: 1,
-            flexDirection: 'column',
-            justifyContent: 'flex-start',
-            paddingLeft: 10,
-            paddingRight: 10
-          }}>
-            <View style={{
-              flexDirection: 'row',
-              flex: 1,
-              justifyContent: 'center'
-            }}>
-              <Text style={{ fontSize: 30 }}>Instructions</Text>
-            </View>
-            <TextList listItems={this.props.steps} size="20" multiCol="false" />
+          <TextList listItems={this.props.ingredients} size="17" splitChar={this.props.splitChar} multiCol="true" align="flex-start" color="#505050" fontFamily = "OpenSans"/>
+        </View>
+        <View style={RecipeStyle.instructionsBox}>
+          <View style={RecipeStyle.titleBoxTwo}>
+            <Text style={RecipeStyle.subTitle}>Instructions</Text>
           </View>
-        </ScrollView>
-      </View>
+          <TextList listItems={this.props.steps} size="17" splitChar={this.props.splitChar} multiCol="false" align="flex-start" color="#505050" fontFamily = "OpenSans"/>
+        </View>
+        <View style={RecipeStyle.infoBar}>
+            <View style={RecipeStyle.infoBox}>
+              <Text style={RecipeStyle.infoText}>Calories</Text>
+              <Text style={RecipeStyle.genText}>{this.props.cals} cal</Text>
+            </View>
+            <View style={RecipeStyle.infoBox}>
+              <Text style={RecipeStyle.infoText}>Fat</Text>
+              <Text style={RecipeStyle.genText}>{this.props.fat} grams</Text>
+            </View>
+          </View>
+          <View style={RecipeStyle.infoBar}>
+            <View style={RecipeStyle.infoBox}>
+              <Text style={RecipeStyle.infoText}>Protein</Text>
+              <Text style={RecipeStyle.genText}>{this.props.protein} grams</Text>
+            </View>
+            <View style={RecipeStyle.infoBox}>
+              <Text style={RecipeStyle.infoText}>Carbs</Text>
+              <Text style={RecipeStyle.genText}>{this.props.carbs} grams</Text>
+            </View>
+          </View>
+          <View style={RecipeStyle.infoBar}>
+            <Diet glutenFree={this.props.glutenfree} dairyFree={this.props.dairyfree} vegan={this.props.vegan} vegetarian={this.props.vegetarian}/>
+          </View>
+        </View>
+      </ScrollView>
+    </View>
     );
   }
 }
 
 //Passes in selected state properties as props to component
 const mapStateToProps = (state) => {
-  const { name, ingredients, steps, servings, prep, cook } = state.recipeForm;
-  return { name, ingredients, steps, servings, prep, cook };
+  const { 
+      name, 
+      ingredients, 
+      steps, 
+      servings, 
+      prep, 
+      cook, 
+      notes, 
+      cals, 
+      carbs, 
+      protein, 
+      fat, 
+      vegetarian, 
+      vegan, 
+      glutenfree, 
+      dairyfree } = state.recipeForm;
+  return { 
+      name, 
+      ingredients, 
+      steps, 
+      servings, 
+      prep, 
+      cook, 
+      notes, 
+      cals, 
+      carbs, 
+      protein, 
+      fat, 
+      vegetarian, 
+      vegan, 
+      glutenfree, 
+      dairyfree };
 };
 
 export default connect(mapStateToProps, { recipeUpdate })(Recipe);

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import {
-  AppRegistry, StyleSheet, ScrollView
+  AppRegistry, StyleSheet, ScrollView, View
  
 } from 'react-native';
 import LoginForm from './LoginForm';
-import Cookerytitle from './CookeryTitle';
+// import Cookerytitle from './CookeryTitle';
 
  
 export default class Myproject extends Component {
@@ -12,11 +12,14 @@ export default class Myproject extends Component {
   render() {
  
     return (
- 
+       
       <ScrollView style = {styles.MainContainer}>
-      <Cookerytitle/>
+      <View style= {{flex:1}}>
+   
         <LoginForm />
+          </View>
       </ScrollView>
+     
         
     );
   }
@@ -29,17 +32,19 @@ const styles = StyleSheet.create(
 MainContainer: 
 {
 
-flex: 1,
-paddingBottom: 200,
+flexGrow: 1,
+paddingTop: 0,
+
  
 // Set content's vertical alignment.
-justifyContent: 'center',
+
+
  
 // Set content's horizontal alignment.
 
  
 // Set hex color code here.
-backgroundColor: '#07174C'
+backgroundColor: '#FFFFFF'
 }
  
 });

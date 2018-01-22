@@ -1,11 +1,29 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'; // 5.0.6
 import _ from 'lodash'; // 4.17.4
-import { ListView } from 'react-native';
-import { recipesFetch } from '../actions';
+import { Actions } from 'react-native-router-flux'; // 4.0.0-beta.28
+import { BottomNavigation } from 'react-native-material-ui'; // 1.19.0
+import { COLOR, ThemeProvider } from 'react-native-material-ui'; // 1.19.0
+import { Constants } from 'expo';
+import { ListView, View, StyleSheet } from 'react-native';
+
+import { recipesFetch, logOut } from '../actions';
 import ListItem from './ListItem';
 
 import "redux"; // 3.7.2
+
+import "@expo/vector-icons"; // 6.2.2
+
+const uiTheme = {
+    palette: {
+        primaryColor: COLOR.green500,
+    },
+    toolbar: {
+        container: {
+            height: 50,
+        },
+    },
+};
 
 class RecipeList extends Component {
 	componentWillMount() {
@@ -25,95 +43,69 @@ class RecipeList extends Component {
 		this.dataSource = ds.cloneWithRows(recipes);
 	}
 
-	renderRow(recipe) {
-		return (
-      <ListItem recipe={recipe} style={{ flex: 0.5 }} />
+renderRow(recipe) {
+        return (
+          
+      <ListItem recipe={recipe} />
+    
     );
-	}
+    }
 
 	render() {
 		return (
-			<ListView
+		  <View>
+			
+			<ThemeProvider uiTheme={uiTheme}>
+			<View style={styles.container}>
+      <ListView
 				enableEmptySections
-        contentContainerStyle={{ flex: 1, flexDirection: 'row' }}
+        contentContainerStyle={{ flexDirection: 'column' }}
 				dataSource={this.dataSource}
 				renderRow={this.renderRow}
 			/>
+       </View>
+      <BottomNavigation hidden={false} >
+      <BottomNavigation.Action
+            key="add"
+            icon="add"
+            label="Add"
+            onPress={() => Actions.recipeCreate()}
+        />
+        <BottomNavigation.Action
+            key="search"
+            icon="search"
+            label="Search"
+            onPress={() => Actions.recipeSearch()}
+        />
+        <BottomNavigation.Action
+            key="logout"
+            icon="settings"
+            label="Logout"
+            onPress={() => this.props.logOut()}
+        />
+      </BottomNavigation>
+       </ThemeProvider>
+			</View>
 		);
 	}
 }
 
+const styles = StyleSheet.create({
+  container: {
+    height: 550,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingTop: Constants.statusBarHeight,
+    backgroundColor: '#ecf0f1',
+  },
+});
+
 const mapStateToProps = state => {
-	const recipes = _.map(state.recipes, (val, uid) => {
+	const recipes = _.map(state.recipes.results, (val, uid) => {
 		return { ...val, uid };
 	});
 
 	return { recipes };
 };
 
-export default connect(mapStateToProps, { recipesFetch })(RecipeList);
-
-
-//Implement this new layout: 
-
-//Layout for Recipe List 
-/*
-import React, { Component } from 'react';
-import {
-  StyleSheet,
-  View
-} from 'react-native';
- 
-export default class GridLayout extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-      {/* Header
-          <View style={styles.row}>
-            <View style={[styles.box, styles.box2]}></View>            
-          </View>
-           {/* Navbar 
-          <View style={styles.row}>
-            <View style={[styles.box, styles.box2]}></View>
-          </View>
- 	  {/* Content row 
-          <View style={styles.row}>
-            <View style={[styles.box, styles.box]}></View>
-            <View style={[styles.box, styles.box3]}></View>
-          </View>
-      {/* Content row 
-          <View style={styles.row}>
-            <View style={[styles.box, styles.box]}></View>
-            <View style={[styles.box, styles.box3]}></View>
-          </View>
-      {/* Footer 
-          <View style={styles.row}>
-            <View style={[styles.box, styles.box2]}></View>
-          </View>
-      </View>
-    );
-  }
-}
- 
-const styles = StyleSheet.create({
-  row: {
-    
-    flexDirection: 'row',
-    marginBottom: 10
-  },
-  box: {
-   flex: 1,
-    backgroundColor: 'aqua',
-  },
-
-  box2: {
-    height: 105,
-    backgroundColor: 'blue'
-
-  },
-  box3: {
-    height: 156,
-    backgroundColor: 'purple'
-  }
-});
-*/
+export default connect(mapStateToProps, { recipesFetch, logOut })(RecipeList);

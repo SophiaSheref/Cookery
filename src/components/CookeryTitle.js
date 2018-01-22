@@ -1,25 +1,25 @@
 import React from 'react';
-import {Text} from 'react-native';
-
-
+import {View, Image} from 'react-native';
 const Header = ( ) => {
-  const {textStyle} =styles;
-  return <Text style = {textStyle}>Cookery</Text>
+  return <View>
+  <View style={{
+               
+                justifyContent: 'center',
+                alignItems: 'center',
+                paddingTop: 270,
+                paddingBottom: 10,
+              }}>
+        <Image
+          style={styles.logo}
+          source={require('./cookery.png')}
+        />
+      </View>
+      </View>
 };
-
 const styles= {
-  
-   textStyle: {
-		alignSelf: 'center',
-		color: '#ddd',
-		fontSize: 50,
-		fontWeight: 'bold',
-		paddingTop: 20,
-		paddingBottom: 20
-		
-		
-	},
-     
-  
+    logo: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    }
 }
 export default Header;

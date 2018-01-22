@@ -6,7 +6,8 @@ import {
 	PASSWORD_CHANGED,
 	LOGIN_USER_SUCCESS,
 	LOGIN_USER_FAIL,
-	LOGIN_USER 
+	LOGIN_USER,
+	SIGN_OUT
 } from './types';
 
 //emailChanged action sends email text to reducers
@@ -61,4 +62,14 @@ const loginUserSuccess = (dispatch, user) => {
 const loginUserFail = (dispatch) => {
 	//Dispatches LOGIN_USER_FAIL to reducers, which displays error message
 	dispatch({ type: LOGIN_USER_FAIL });
+};
+
+export const logOut = () => {
+  return (dispatch) =>{
+  firebase.auth().signOut().then(() => {
+    Actions.login();
+    dispatch({ type: SIGN_OUT });
+  })
+  .catch( err => console.log(err.message));
+  };
 };

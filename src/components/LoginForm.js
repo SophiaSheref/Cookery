@@ -59,9 +59,10 @@ class LoginForm extends Component {
 	//Render LoginForm to screen
 	render() {
 		return (
-			<Card>
+			<Card >
 				<CardSection>
 					<Input
+					  style={styles.textStyle}
 						label="Email"
 						placeholder="email@gmail.com"
 						onChangeText={this.onEmailChange.bind(this)}
@@ -70,6 +71,7 @@ class LoginForm extends Component {
 				</CardSection>
 				<CardSection>
 					<Input
+					  style={styles.textStyle}
 						label="Password"
 						placeholder="password"
 						secureTextEntry
@@ -78,10 +80,14 @@ class LoginForm extends Component {
 					/>
 				</CardSection>
 					{this.renderError()}
-				<CardSection>
+				
 					{this.renderButton()}
-				</CardSection>
+					
+				<View style={styles.viewStyle}>
+				</View>
+				
 			</Card>
+			
 		);
 	}
 }
@@ -91,7 +97,14 @@ const styles = {
 		fontSize: 20,
 		alignSelf: 'center',
 		color: 'red'
+	},
+	textStyle:{
+	  fontFamily: 'OpenSans',
+	  fontSize:20,
+	},
+	viewStyle:{
 	}
+
 };
 
 //Takes state props and returns them as component props
