@@ -1,4 +1,3 @@
-<h1 align="center"> Cookery </h1> <br>
 <p align="center">
     <img alt="cookery" title="cookery" src="https://i.imgur.com/ZFiAFlQ.png" width="450">
 </p>
