@@ -53,13 +53,11 @@ A few of the things you can do with Cookery:
   <img src = "" width=700>
 </p>
 
-## Contributors
+## Tech used
+*React Native.
+*Android Studio.
+*Expo io.
 
-<a href="https://github.com/adlipsey">Andrew Lipsey,</a>
-<a href="https://github.com/jes3rk"> Joseph Schefer,</a>
-<a href="https://github.com/SophiaSheref"> Haley ,</a>
-<a href="https://github.com/mmacdonald1"> Melanie MacDonald,</a>
-<a href="https://github.com/SophiaSheref"> Sophia Sheref</a>.
 
 ## Build Process
 
@@ -68,6 +66,15 @@ A few of the things you can do with Cookery:
 - `npm install` to install dependencies
 - `npm run link` to link react-native dependencies
 - `react-native run-android` to start the packager and run the app in the android studio simulator.
+
+
+## Contributors
+
+<a href="https://github.com/adlipsey">Andrew Lipsey,</a>
+<a href="https://github.com/jes3rk"> Joseph Schefer,</a>
+<a href="https://github.com/SophiaSheref"> Haley ,</a>
+<a href="https://github.com/mmacdonald1"> Melanie MacDonald,</a>
+<a href="https://github.com/SophiaSheref"> Sophia Sheref</a>.
 
 
 ## Acknowledgments
