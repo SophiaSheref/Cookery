@@ -37,11 +37,15 @@ A few of the things you can do with Cookery:
 * Delete a recipe.
 
 <p align="center">
-  <img src = "" width=700>
+  <img src = "https://i.imgur.com/4PteC0q.png" width=700>
 </p>
 
 <p align="center">
-  <img src = "" width=700>
+  <img src = "https://i.imgur.com/h8e5dvX.png" width=700>
+</p>
+
+<p align="center">
+  <img src = "https://i.imgur.com/OGUxlkM.png" width=700>
 </p>
 
 ## Tech used
@@ -63,7 +67,7 @@ A few of the things you can do with Cookery:
 
 <a href="https://github.com/adlipsey">Andrew Lipsey,</a>
 <a href="https://github.com/jes3rk"> Joseph Schefer,</a>
-<a href="https://github.com/SophiaSheref"> Haley ,</a>
+<a href="https://github.com/hml1232"> Haley Lock,</a>
 <a href="https://github.com/mmacdonald1"> Melanie MacDonald,</a>
 <a href="https://github.com/SophiaSheref"> Sophia Sheref</a>.
 
