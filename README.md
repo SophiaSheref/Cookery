@@ -2,13 +2,6 @@
     <img alt="cookery" title="cookery" src="https://i.imgur.com/ZFiAFlQ.png" width="550">
 </p>
 
-<p align="center">
-    <img alt="Download on the App Store" title="App Store" src="http://i.imgur.com/0n2zqHD.png" width="140">
-</p>
-<p align="right">
-    <img alt="Get it on Google Play" title="Google Play" src="http://i.imgur.com/mtGRPuM.png" width="140">
-</p>
-
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 ## Table of Contents
