@@ -22,7 +22,7 @@ Cookery is an app for accumulating all of your recipes into a single, searchable
 **Available for both iOS and Android.**
 
 <p align="center">
-  <img src = "" width=350>
+  <img src = "https://i.imgur.com/4PteC0q.png" width=350>
 </p>
 
 ## Features
