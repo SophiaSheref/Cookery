@@ -33,22 +33,21 @@ A few of the things you can do with Cookery:
 * Delete a recipe.
 
 <p align="center">
-  <img src = "https://i.imgur.com/4PteC0q.png" width=400>
+  <img src = "https://i.imgur.com/4PteC0q.png" width=200>
 </p>
 
 <p align="center">
-  <img src = "https://i.imgur.com/h8e5dvX.png" width=400>
+  <img src = "https://i.imgur.com/h8e5dvX.png" width=200>
 </p>
 
 <p align="center">
-  <img src = "https://i.imgur.com/OGUxlkM.png" width=400>
+  <img src = "https://i.imgur.com/OGUxlkM.png" width=200>
 </p>
 
 ## Tech used
 *React Native.
 *Android Studio.
 *Expo io.
-
 
 ## Build Process
 
@@ -58,7 +57,6 @@ A few of the things you can do with Cookery:
 - `npm run link` to link react-native dependencies
 - `react-native run-android` to start the packager and run the app in the android studio simulator.
 
-
 ## Contributors
 
 <a href="https://github.com/adlipsey">Andrew Lipsey,</a>
@@ -66,7 +64,6 @@ A few of the things you can do with Cookery:
 <a href="https://github.com/hml1232"> Haley Lock,</a>
 <a href="https://github.com/mmacdonald1"> Melanie MacDonald,</a>
 <a href="https://github.com/SophiaSheref"> Sophia Sheref</a>.
-
 
 ## Acknowledgments
 
