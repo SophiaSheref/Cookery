@@ -21,10 +21,6 @@ Cookery is an app for accumulating all of your recipes into a single, searchable
 
 **Available for both iOS and Android.**
 
-<p align="center">
-  <img src = "https://i.imgur.com/4PteC0q.png" width=350>
-</p>
-
 ## Features
 
 A few of the things you can do with Cookery:
@@ -37,15 +33,15 @@ A few of the things you can do with Cookery:
 * Delete a recipe.
 
 <p align="center">
-  <img src = "https://i.imgur.com/4PteC0q.png" width=700>
+  <img src = "https://i.imgur.com/4PteC0q.png" width=400>
 </p>
 
 <p align="center">
-  <img src = "https://i.imgur.com/h8e5dvX.png" width=700>
+  <img src = "https://i.imgur.com/h8e5dvX.png" width=400>
 </p>
 
 <p align="center">
-  <img src = "https://i.imgur.com/OGUxlkM.png" width=700>
+  <img src = "https://i.imgur.com/OGUxlkM.png" width=400>
 </p>
 
 ## Tech used
