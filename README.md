@@ -55,11 +55,11 @@ A few of the things you can do with Cookery:
 
 ## Contributors
 
-<a href="https://github.com/adlipsey">Andrew Lipsey</a>
-<a href="https://github.com/jes3rk">Joseph Schefer</a>
-<a href="https://github.com/SophiaSheref">Haley </a>
-<a href="https://github.com/mmacdonald1">Melanie MacDonald</a>
-<a href="https://github.com/SophiaSheref">Sophia Sheref</a>.
+<a href="https://github.com/adlipsey">Andrew Lipsey,</a>
+<a href="https://github.com/jes3rk"> Joseph Schefer,</a>
+<a href="https://github.com/SophiaSheref"> Haley ,</a>
+<a href="https://github.com/mmacdonald1"> Melanie MacDonald,</a>
+<a href="https://github.com/SophiaSheref"> Sophia Sheref</a>.
 
 ## Build Process
 
