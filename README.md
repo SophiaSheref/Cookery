@@ -1,6 +1,6 @@
 <h1 align="center"> Cookery </h1> <br>
 <p align="center">
-    <img alt="cookery" title="cookery" src="https://imgur.com/a/j0OTI" width="450">
+    <img alt="cookery" title="cookery" src="https://ibb.co/dHG2Tb" width="450">
 </p>
 
 <p align="center">
