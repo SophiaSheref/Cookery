@@ -1,5 +1,5 @@
 <p align="center">
-    <img alt="cookery" title="cookery" src="https://i.imgur.com/ZFiAFlQ.png" width="450">
+    <img alt="cookery" title="cookery" src="https://i.imgur.com/ZFiAFlQ.png" width="550">
 </p>
 
 <p align="center">
