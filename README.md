@@ -5,7 +5,7 @@
 <p align="center">
     <img alt="Download on the App Store" title="App Store" src="http://i.imgur.com/0n2zqHD.png" width="140">
 </p>
-<p align="center">
+<p align="right">
     <img alt="Get it on Google Play" title="Google Play" src="http://i.imgur.com/mtGRPuM.png" width="140">
 </p>
 
@@ -15,7 +15,7 @@
 
 - [Introduction](#introduction)
 - [Features](#features)
-- [Tech used] (#tech-used)
+- [Tech used](#tech-used)
 - [Contributors](#contributors)
 - [Build Process](#build-process)
 - [Acknowledgments](#acknowledgments)
