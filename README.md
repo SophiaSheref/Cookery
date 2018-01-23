@@ -67,4 +67,4 @@ A few of the things you can do with Cookery:
 
 ## Acknowledgments
 
-Thanks to 
+Thanks to Dzmitry Dubarau.
