@@ -4,10 +4,6 @@
 </p>
 
 <p align="center">
-Your Digital Cookbook.
-</p>
-
-<p align="center">
   <a href="https://itunes.apple.com/us/app/gitpoint/id1251245162?mt=8">
     <img alt="Download on the App Store" title="App Store" src="http://i.imgur.com/0n2zqHD.png" width="140">
   </a>
