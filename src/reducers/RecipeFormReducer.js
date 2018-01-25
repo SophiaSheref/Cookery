@@ -2,7 +2,9 @@
 import {
 	RECIPE_UPDATE,
 	RECIPE_CREATE,
-	RECIPE_SAVE_SUCCESS
+	RECIPE_SAVE_SUCCESS,
+	CLEAR_FORM,
+	RECIPE_UPDATE_SUCCESS
 } from '../actions/types';
 
 //Declare initial state (mostly used to reset forms)
@@ -31,7 +33,6 @@ export default (state = INITIAL_STATE, action) => {
 		//When a recipe is updated:
 		case RECIPE_UPDATE:
 			//State is returned with the modified properties changed
-
 			return { ...state, [action.payload.prop]: action.payload.value };
 		//When a recipe is created:
 		case RECIPE_CREATE:
@@ -41,6 +42,10 @@ export default (state = INITIAL_STATE, action) => {
 		case RECIPE_SAVE_SUCCESS:
 			//Initial state is returned, clearing form inputs
 			return INITIAL_STATE;
+		case RECIPE_UPDATE_SUCCESS:
+		  return state;
+		case CLEAR_FORM:
+		  return INITIAL_STATE;
 		//Anything else returns state, nothing is changed
 		default:
 			return state;

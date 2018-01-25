@@ -15,17 +15,17 @@ class ListItem extends Component {
 			<TouchableHighlight onPress={this.onRowPress.bind(this)}>
       <View>
 			<CardSection style={{ flexDirection: 'column', flex: 1 }}>
-			<Text style={styles.titleStyle}>
+			<Text style ={styles.titleStyle} >
 				{name}
 			</Text>
-			<View >
-				<Text style={styles.textStyle}>
+			<View>
+				<Text style = {styles.textStyle}>
 					Prep Time: {prep}
 				</Text>
-				<Text style={styles.textStyle}>
+				<Text  style = {styles.textStyle}>
 					Cook Time: {cook}
 				</Text>
-				<Text style={styles.textStyle}>
+				<Text  style = {styles.servingStyle}>
 					Servings: {servings}
 				</Text>
 			</View>
@@ -37,14 +37,32 @@ class ListItem extends Component {
 }
 
 const styles = {
-	titleStyle: {
-		fontSize: 18,
-		paddingLeft: 15,
-		fontFamily: 'Lobster'
-	},
-	textStyle: {
-	  fontFamily: 'OpenSans'
-	}
+    titleStyle: {
+        adjustFontSizeToFit: true,
+        fontFamily: 'Lobster',
+        fontSize: 30,
+        backgroundColor: '#ba3748',
+        color: 'white',
+        width: 300,
+        marginBottom: 10,
+        textAlign: 'center',
+        padding:10
+    },
+    textStyle: {
+      fontFamily: 'OpenSans_Bold',
+      backgroundColor: '#fff',
+      color: '#505050',
+      fontSize: 18,
+      textAlign: 'center'
+    },
+    servingStyle:{
+      fontFamily: 'OpenSans_Bold',
+      backgroundColor: '#fff',
+      color: '#505050',
+      fontSize: 18,
+      textAlign: 'center',
+      paddingBottom: 10,
+    }
 };
 
 export default ListItem;

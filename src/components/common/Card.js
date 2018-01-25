@@ -11,8 +11,7 @@ const styles = {
 	containerStyle: {
 		borderWidth: 1,
 		borderRadius: 2,
-		borderColor: '#ba3748',
-		borderBottomWidth: 5,
+		borderColor: '#DDDDDD',
 		shadowColor: '#000',
 		shadowOffset: { width: 0, height: 2 },
 		shadowOpacity: 0.1,
@@ -20,7 +19,7 @@ const styles = {
 		elevation: 2,
 		marginLeft: 5,
 		marginRight: 5,
-		marginTop: 10
+		marginTop: 10,
 	}
 };
 
