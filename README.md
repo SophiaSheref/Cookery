@@ -17,9 +17,21 @@
 
 ## Introduction
 
-Cookery is an app for accumulating all of your recipes into a single, searchable cookbook on your phone! No more flipping through book, binders, or notecards. Browse the whole list or search by ingredient, pull up the recipe, and have ingredients, instructions, notes, and nutritional information right there on one screen.
+Cookery is a mobile app for accumulating all of your recipes into a single, searchable cookbook on your phone! No more flipping through book, binders, or notecards. Browse the whole list or search by ingredient.  Pull up your recipes and have ingredients, instructions, notes, and nutritional information right there on one screen.
 
 **Available for both iOS and Android.**
+
+## Android
+
+Find us in the Google Play Store.
+
+![QR](https://github.com/mmacdonald1/Cookery/blob/master/QRcode.png)
+
+## iOS
+
+View on this simulator.
+
+https://snack.expo.io/@mmacdonald1/cookery
 
 ## Features
 
@@ -45,9 +57,9 @@ A few of the things you can do with Cookery:
 </p>
 
 ## Tech used
-*React Native.
-*Android Studio.
-*Expo io.
+* React Native.
+* Android Studio.
+* Expo io.
 
 ## Build Process
 
